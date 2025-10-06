@@ -61,5 +61,21 @@ namespace WebApplication2.Controllers
                 return StatusCode(500);
             }
         }
+
+        [HttpGet("mul", Name = "Subtraction")]
+        public IActionResult MultiplyTwoNumbers([FromQuery] int a, [FromQuery] int b)
+        {
+
+            try
+            {
+                int res = a * b;
+
+                return Ok(new { Minus = res });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500);
+            }
+        }
     }
 }
