@@ -70,7 +70,23 @@ namespace WebApplication2.Controllers
             {
                 int res = a * b;
 
-                return Ok(new { Minus = res });
+                return Ok(new { Mul = res });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500);
+            }
+        }
+
+        [HttpGet("Div", Name = "Divide")]
+        public IActionResult DivideTwoNumbers([FromQuery] int a, [FromQuery] int b)
+        {
+
+            try
+            {
+                int res = a / b;
+
+                return Ok(new { Div = res });
             }
             catch (Exception ex)
             {
