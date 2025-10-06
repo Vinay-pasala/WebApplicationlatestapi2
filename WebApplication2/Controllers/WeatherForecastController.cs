@@ -78,7 +78,7 @@ namespace WebApplication2.Controllers
             }
         }
 
-        [HttpGet("Div", Name = "Divide")]
+        [HttpGet("Div", Name = "Dividend")]
         public IActionResult DivideTwoNumbers([FromQuery] int a, [FromQuery] int b)
         {
 
