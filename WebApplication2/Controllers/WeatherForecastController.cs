@@ -62,7 +62,7 @@ namespace WebApplication2.Controllers
             }
         }
 
-        [HttpGet("mul", Name = "Subtraction")]
+        [HttpGet("mul", Name = "Multiply")]
         public IActionResult MultiplyTwoNumbers([FromQuery] int a, [FromQuery] int b)
         {
 
